@@ -63,19 +63,18 @@ angular.module('ToDoApp', ['ui.bootstrap'])
         };
 
         //updates the vote vote is greater than zero
-        $scope.updateVotes = function (comment, amount) {
-            if (comment.downvote || amount == 1) {
-                $scope.incrementVotes(comment, amount);
-            } else if (comment.votes == 0) {
+        $scope.incrementVotes = function (comment, amount) {
+            comment.downvote = true;
+            if (comment.votes == 0 && amount == -1) {
                 comment.downvote = false;
-            } else if (amount == -1) {
-                $scope.incrementVotes(comment, amount);
+            } else if (comment.downvote) {
+                $scope.incrementVotes2(comment, amount);
             }
         };
 
         //adds one or subtracts one from the score depending on whether or not the
         //user clicks thumbs up or thumbs down
-        $scope.incrementVotes = function (comment, amount) {
+        $scope.incrementVotes2 = function (comment, amount) {
             $scope.updating = true;
             $http.put(commentsUrl + '/' + comment.objectId, {
                 votes: {

@@ -69,8 +69,8 @@
                         <td ng-class="{done: comment.done}">{{comment.comment}}</td>
                         <td>
                             {{comment.votes || 0}}
-                            <span class="glyphicon glyphicon-thumbs-up" ng-click="updateVotes(comment, 1)"></span>
-                            <span class="glyphicon glyphicon-thumbs-down" ng-click="updateVotes(comment, -1)"></span>
+                            <span class="glyphicon glyphicon-thumbs-up" ng-click="incrementVotes(comment, 1)"></span>
+                            <span class="glyphicon glyphicon-thumbs-down" ng-click="incrementVotes(comment, -1)"></span>
                         </td>
                         <td><input type="checkbox" ng-model="comment.done" ng-change="updateComment(comment)"/></td>
                     </tr>
