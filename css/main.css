@@ -19,6 +19,7 @@ body {
 
 .view {
     border-top: ridge;
+    border-bottom: ridge;
     border-width: 5px;
     border-color: blue;
 }
