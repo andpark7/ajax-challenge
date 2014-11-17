@@ -36,6 +36,7 @@ angular.module('ToDoApp', ['ui.bootstrap'])
             $http.post(commentsUrl, $scope.newComment)
                 .success(function (responseData) {
                     $scope.newComment.objectId = responseData.objectId;
+                    $scope.newComment.votes = 0;
                     $scope.comments.push($scope.newComment);
                     $scope.newComment = {done: false};
                 })
