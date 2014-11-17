@@ -11,3 +11,23 @@ body {
     margin-right: 10px;
 }
 
+.add {
+    border-top: ridge;
+    border-width: 5px;
+    border-color: blue;
+}
+
+.view {
+    border-top: ridge;
+    border-width: 5px;
+    border-color: blue;
+}
+
+.done {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.col-md-6 {
+    padding-left: 0px;
+}
