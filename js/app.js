@@ -62,7 +62,7 @@ angular.module('ToDoApp', ['ui.bootstrap'])
                 });
         };
 
-        //updates the vote vote is greater than zero
+        //updates the vote if vote is greater than zero
         $scope.incrementVotes = function (comment, amount) {
             comment.downvote = true;
             if (comment.votes == 0 && amount == -1) {
