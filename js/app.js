@@ -93,5 +93,6 @@ angular.module('ToDoApp', ['ui.bootstrap'])
                 $scope.updating = false;
             });
         };
-
     });
+
+

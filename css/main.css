@@ -24,6 +24,10 @@ body {
     border-color: blue;
 }
 
+.invalid-field {
+    border: 1px solid #FF0000;
+}
+
 .done {
     text-decoration: line-through;
     color: #999;
